@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "citas",
+  "info": {
+    "singularName": "cita",
+    "pluralName": "citas",
+    "displayName": "Cita",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "professional": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::professional.professional",
+      "inversedBy": "citas"
+    },
+    "fechaHora": {
+      "type": "datetime"
+    },
+    "firebaseUSerID": {
+      "type": "string"
+    },
+    "estado": {
+      "type": "enumeration",
+      "enum": [
+        "Pendiente",
+        "Confirmada",
+        "Cancelada",
+        "Completada"
+      ]
+    }
+  }
+}

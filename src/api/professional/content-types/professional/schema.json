@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "professionals",
+  "info": {
+    "singularName": "professional",
+    "pluralName": "professionals",
+    "displayName": "Professional",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Service": {
+      "type": "string",
+      "required": true
+    },
+    "Experience": {
+      "required": true,
+      "type": "integer"
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "Phone": {
+      "required": true,
+      "type": "integer"
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "Location": {
+      "type": "string",
+      "required": true
+    },
+    "PriceEstimate": {
+      "type": "decimal"
+    },
+    "Rating": {
+      "type": "decimal"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "professionals"
+    },
+    "citas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cita.cita",
+      "mappedBy": "professional"
+    }
+  }
+}
