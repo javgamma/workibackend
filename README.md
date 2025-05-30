@@ -15,3 +15,12 @@ Clona este repositorio:
 ```bash
 git clone https://github.com/javgamma/workibackend.git
 cd workibackend
+
+## 🛠️ Configuración del entorno
+
+Este proyecto utiliza variables de entorno para funcionar correctamente. Asegúrate de configurar tu archivo `.env` siguiendo los pasos:
+
+1. Copia el archivo de ejemplo:
+
+```bash
+cp .env.example .env
